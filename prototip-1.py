@@ -100,6 +100,15 @@ def parse_cfdi(xml_path: str) -> Dict[str, Any]:
     data["iva"] = total_iva
     data["otros_impuestos"] = total_otros_impuestos
 
+    # UUID del TimbreFiscalDigital
+    uuid = None
+    complemento = comp.find("cfdi:Complemento", NS_local) if NS_local else comp.find("{*}Complemento")
+    if complemento is not None:
+        tfd = complemento.find("tfd:TimbreFiscalDigital", NS) if NS_local else complemento.find("{*}TimbreFiscalDigital")
+        if tfd is not None:
+            uuid = _get_attr(tfd, "UUID")
+    data["uuid"] = uuid
+
     # Campos personalizados (cualquier atributo no estándar en Comprobante)
     standard_attrs = {
         "Version", "Fecha", "Serie", "Folio", "Moneda", "TipoDeComprobante",
@@ -136,7 +145,7 @@ def export_cfdi_to_csv(cfdis: List[Dict[str, Any]], csv_path: str) -> None:
 
     # Definimos columnas estándar
     fieldnames = [
-        "file", "subcarpeta", "version", "fecha", "serie", "folio",
+        "file", "subcarpeta", "uuid", "version", "fecha", "serie", "folio",
         "emisor_rfc", "emisor_nombre", "emisor_regimen",
         "receptor_rfc", "receptor_nombre", "receptor_regimen",
         "receptor_cp", "uso_cfdi",
@@ -182,9 +191,9 @@ def process_folder(folder_path: str, csv_path: str) -> None:
                 except Exception as e:
                     print(f"Error procesando {fname} en {root}: {e}")
 
-    print(f"\n✓ Total de CFDIs procesados: {len(cfdis)}")
+    print(f"\nTotal de CFDIs procesados: {len(cfdis)}")
     export_cfdi_to_csv(cfdis, csv_path)
-    print(f"✓ CSV generado: {csv_path}")
+    print(f"CSV generado: {csv_path}")
 
 
 if __name__ == "__main__":
