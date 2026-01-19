@@ -213,15 +213,47 @@ def process_folder(folder_path: str, output_dir: str = "./extraidos") -> pd.Data
     df = export_cfdi_to_csv(cfdis, csv_path)
     print(f"CSV generado: {csv_path}")
     
-    # Mostrar DataFrame en pantalla
-    print("\n" + "="*80)
+    # Mostrar DataFrame en pantalla con configuración para ver todas las columnas
+    print("\n" + "="*100)
     print("DATAFRAME CON INFORMACION DE LOS CFDIs:")
-    print("="*80)
-    print(df.to_string())
-    print("\n" + "="*80)
-    print(f"Total de registros: {len(df)}")
-    print(f"Columnas: {len(df.columns)}")
-    print("="*80)
+    print("="*100)
+    
+    # Configurar pandas para mostrar todas las columnas
+    pd.set_option('display.max_columns', None)
+    pd.set_option('display.max_rows', None)
+    pd.set_option('display.width', None)
+    pd.set_option('display.max_colwidth', 50)
+    
+    # Mostrar información general
+    print(f"\nTotal de registros: {len(df)}")
+    print(f"Total de columnas: {len(df.columns)}")
+    print(f"\nColumnas disponibles:")
+    for i, col in enumerate(df.columns, 1):
+        print(f"  {i}. {col}")
+    
+    # Mostrar primeros registros con las columnas principales
+    print("\n" + "-"*100)
+    print("PRIMEROS REGISTROS (columnas principales):")
+    print("-"*100)
+    columnas_principales = ['file', 'subcarpeta', 'uuid', 'fecha', 'emisor_nombre', 
+                           'receptor_nombre', 'subtotal', 'iva', 'total']
+    if all(col in df.columns for col in columnas_principales):
+        print(df[columnas_principales].head(10).to_string(index=False))
+    
+    # Mostrar estadísticas
+    print("\n" + "-"*100)
+    print("ESTADISTICAS:")
+    print("-"*100)
+    print(f"Total facturado (subtotal): ${df['subtotal'].sum():,.2f}")
+    print(f"Total IVA: ${df['iva'].sum():,.2f}")
+    print(f"Total general: ${df['total'].sum():,.2f}")
+    print(f"Promedio por factura: ${df['total'].mean():,.2f}")
+    print(f"\nEmisores únicos: {df['emisor_nombre'].nunique()}")
+    print(f"Subcarpetas procesadas: {df['subcarpeta'].nunique()}")
+    
+    print("\n" + "="*100)
+    print(f"Datos completos guardados en: {csv_path}")
+    print("="*100)
     
     return df
 
