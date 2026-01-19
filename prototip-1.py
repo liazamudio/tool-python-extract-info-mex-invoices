@@ -2,6 +2,8 @@ import os
 import csv
 import xml.etree.ElementTree as ET
 from typing import Dict, Any, List
+import pandas as pd
+from datetime import datetime
 
 # Namespaces típicos CFDI 3.3 / 4.0
 NS = {
@@ -135,13 +137,13 @@ def print_cfdi(data: Dict[str, Any]) -> None:
         print(f"  - {c['descripcion']} | Cant: {c['cantidad']} | VU: {c['valor_unitario']} | Importe: {c['importe']}")
 
 
-def export_cfdi_to_csv(cfdis: List[Dict[str, Any]], csv_path: str) -> None:
+def export_cfdi_to_csv(cfdis: List[Dict[str, Any]], csv_path: str) -> pd.DataFrame:
     """
-    Exporta un CSV 'plano' a nivel comprobante.
+    Exporta un CSV 'plano' a nivel comprobante y retorna el DataFrame.
     Si quieres detalle por concepto, se puede hacer otro CSV aparte.
     """
     if not cfdis:
-        return
+        return pd.DataFrame()
 
     # Definimos columnas estándar
     fieldnames = [
@@ -160,19 +162,25 @@ def export_cfdi_to_csv(cfdis: List[Dict[str, Any]], csv_path: str) -> None:
     custom_keys = sorted(custom_keys)
     fieldnames.extend(custom_keys)
 
-    with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
+    # Preparar datos para el DataFrame
+    rows = []
+    for d in cfdis:
+        row = {k: d.get(k) for k in fieldnames}
+        # Rellenar campos personalizados
+        for ck in custom_keys:
+            row[ck] = d.get("custom_comprobante_attrs", {}).get(ck)
+        rows.append(row)
+    
+    # Crear DataFrame
+    df = pd.DataFrame(rows, columns=fieldnames)
+    
+    # Guardar el CSV
+    df.to_csv(csv_path, index=False, encoding="utf-8")
+    
+    return df
 
-        for d in cfdis:
-            row = {k: d.get(k) for k in fieldnames}
-            # Rellenar campos personalizados
-            for ck in custom_keys:
-                row[ck] = d.get("custom_comprobante_attrs", {}).get(ck)
-            writer.writerow(row)
 
-
-def process_folder(folder_path: str, csv_path: str) -> None:
+def process_folder(folder_path: str, output_dir: str = "./extraidos") -> pd.DataFrame:
     cfdis: List[Dict[str, Any]] = []
     
     # Recorrer recursivamente todas las subcarpetas
@@ -192,12 +200,33 @@ def process_folder(folder_path: str, csv_path: str) -> None:
                     print(f"Error procesando {fname} en {root}: {e}")
 
     print(f"\nTotal de CFDIs procesados: {len(cfdis)}")
-    export_cfdi_to_csv(cfdis, csv_path)
+    
+    # Crear carpeta extraidos si no existe
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Generar nombre del archivo con fecha y hora
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    csv_filename = f"{timestamp}_info_cfdis.csv"
+    csv_path = os.path.join(output_dir, csv_filename)
+    
+    # Exportar a CSV y obtener DataFrame
+    df = export_cfdi_to_csv(cfdis, csv_path)
     print(f"CSV generado: {csv_path}")
+    
+    # Mostrar DataFrame en pantalla
+    print("\n" + "="*80)
+    print("DATAFRAME CON INFORMACION DE LOS CFDIs:")
+    print("="*80)
+    print(df.to_string())
+    print("\n" + "="*80)
+    print(f"Total de registros: {len(df)}")
+    print(f"Columnas: {len(df.columns)}")
+    print("="*80)
+    
+    return df
 
 
 if __name__ == "__main__":
     # Ejemplo de uso:
     carpeta_xml = r"./cfdis_xml"
-    salida_csv = r"./cfdis_consolidados.csv"
-    process_folder(carpeta_xml, salida_csv)
+    df_cfdis = process_folder(carpeta_xml)
