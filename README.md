@@ -54,6 +54,9 @@ cd project
 python -m venv .venv
 .venv\Scripts\activate
 
+venv\Scripts\activate   # Forma comun de activar el entorno.
+deactivate              # Forma común de desactivar el entorno.
+
 # Linux/Mac
 python3 -m venv .venv
 source .venv/bin/activate
