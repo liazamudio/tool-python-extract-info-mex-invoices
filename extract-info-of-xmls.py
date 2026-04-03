@@ -220,12 +220,15 @@ def process_folder(folder_path: str, output_dir: str = "./extraidos") -> pd.Data
     print("\n" + "-"*100)
     print("ESTADISTICAS:")
     print("-"*100)
-    print(f"Total facturado (subtotal): ${df['subtotal'].sum():,.2f}")
-    print(f"Total IVA: ${df['iva'].sum():,.2f}")
-    print(f"Total general: ${df['total'].sum():,.2f}")
-    print(f"Promedio por factura: ${df['total'].mean():,.2f}")
-    print(f"\nEmisores únicos: {df['emisor_nombre'].nunique()}")
-    print(f"Subcarpetas procesadas: {df['subcarpeta'].nunique()}")
+    if not df.empty and 'subtotal' in df.columns:
+        print(f"Total facturado (subtotal): ${df['subtotal'].sum():,.2f}")
+        print(f"Total IVA: ${df['iva'].sum():,.2f}")
+        print(f"Total general: ${df['total'].sum():,.2f}")
+        print(f"Promedio por factura: ${df['total'].mean():,.2f}")
+        print(f"\nEmisores únicos: {df['emisor_nombre'].nunique()}")
+        print(f"Subcarpetas procesadas: {df['subcarpeta'].nunique()}")
+    else:
+        print("No hay datos para mostrar estadísticas.")
     
     print("\n" + "="*100)
     print(f"Datos completos guardados en: {csv_path}")
@@ -236,5 +239,6 @@ def process_folder(folder_path: str, output_dir: str = "./extraidos") -> pd.Data
 
 if __name__ == "__main__":
     # Ejemplo de uso:
-    carpeta_xml = r"./cfdis_xml"
+    # carpeta_xml = r"./cfdis_xml"
+    carpeta_xml = r"./cfdis_xml/202601-pers"
     df_cfdis = process_folder(carpeta_xml)
