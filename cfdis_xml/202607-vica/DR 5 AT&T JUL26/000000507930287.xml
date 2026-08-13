@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+            <cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Exportacion="01" Version="4.0" Serie="AB" Folio="260705-000885955803" Fecha="2026-07-05T02:46:37" Sello="e0/qW2dIfTaoOS+mADc7HOcTWsdc1FDfDTJZD5VGfiRe11QDgFRahHnc7xKo7iYOcf4029KW4HNKQr6KloBgg5aptLz5QH2njJHl3SsFhPk/s6qcR3M6pehAe9+HbOl7Lq80ryyWsd95G/RbZAPrI1f7M108F79Jegw5TeGnm0R6TyQVATB6jMWyc/fo4+4UJhWeBoOqOJCkelXqFB0SEyn59NJjcSV0bHKUdJm+7QcauM+8lyxpo1WnyD+bezlKEZKLnsJPZrhxeJ8KIxG4jpaDvfC36QUJyd2rwez9SY4zWFIVoHYcHX7KfwqMR/3MLfIH9tpNLDQvd91/KPjALQ==" FormaPago="99" NoCertificado="00001000000714227830" Certificado="MIIGPTCCBCWgAwIBAgIUMDAwMDEwMDAwMDA3MTQyMjc4MzAwDQYJKoZIhvcNAQELBQAwggGVMTUwMwYDVQQDDCxBQyBERUwgU0VSVklDSU8gREUgQURNSU5JU1RSQUNJT04gVFJJQlVUQVJJQTEuMCwGA1UECgwlU0VSVklDSU8gREUgQURNSU5JU1RSQUNJT04gVFJJQlVUQVJJQTEaMBgGA1UECwwRU0FULUlFUyBBdXRob3JpdHkxMjAwBgkqhkiG9w0BCQEWI3NlcnZpY2lvc2FsY29udHJpYnV5ZW50ZUBzYXQuZ29iLm14MSYwJAYDVQQJDB1Bdi4gSGlkYWxnbyA3NywgQ29sLiBHdWVycmVybzEOMAwGA1UEEQwFMDYzMDAxCzAJBgNVBAYTAk1YMQ0wCwYDVQQIDARDRE1YMRMwEQYDVQQHDApDVUFVSFRFTU9DMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxXDBaBgkqhkiG9w0BCQITTXJlc3BvbnNhYmxlOiBBRE1JTklTVFJBQ0lPTiBDRU5UUkFMIERFIFNFUlZJQ0lPUyBUUklCVVRBUklPUyBBTCBDT05UUklCVVlFTlRFMB4XDTI1MDMyMDE5MzE0OFoXDTI5MDMyMDE5MzE0OFowgfoxMjAwBgNVBAMUKUFUJlQgQ09NRVJDSUFMSVpBQ0lPTiBNT1ZJTCBTIERFIFJMIERFIENWMTIwMAYDVQQpFClBVCZUIENPTUVSQ0lBTElaQUNJT04gTU9WSUwgUyBERSBSTCBERSBDVjEyMDAGA1UEChQpQVQmVCBDT01FUkNJQUxJWkFDSU9OIE1PVklMIFMgREUgUkwgREUgQ1YxJTAjBgNVBC0THElVUzg5MDYxNlJINiAvIFZFUkg3NDExMjY2NzcxHjAcBgNVBAUTFSAvIFZFUkg3NDExMjZIREZMREMwNjEVMBMGA1UECxMMSVVTODkwNjE2Ukg2MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwpFcD3x3LQjSgIr37hcQcqvn/F6mihYOajqZgpT2bRJxm8fm9m0t8e6G3SywA24mTnh9do8qMEsmiyA+Z+3laq7osem5eaghfQ/vYo7RJOr3sCJog+pOZqoUcsQ9s72btrhaPDBENCSnWyx2nVd1XVVNqfX3sIKJtTUFuvBMMWTOGieISfn2Ymsu9F2YOa6q19lS9eI0v/UpnNhRCEaOl1CA5LA8GYMx6fHVl9hLSAO/DB9X+GmUL7/ZqMJ7OTkghRLjvqyAqXWDifAtXkfX2B524JS9kEzm3mIvNwhUwMwEKw9kpQ5VPAIB/0bwCsuwX+KSd5bgJK4AaQhdTR5nVwIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAghWjSCaOaXl0TpZW1zbMSbi8GU/FmDJcqRef7r/l5/Qux/mqLIdVB5o8tOVStz3uN7G/E9dlgHJkXd9U+l0K4EESk/k/by6Wrz4ONHlt8WHAuWrryR2woA7Y1vy80DiNnHweWUXcYRsROq4stfV2VGpkeN61ccSB0nGU9hESIN6KgCuQWOXd1M81B7QTIhAjkuywIfmYoU9tbEpnZ8bt3iJkgeLVu5JkA511S7hc7l/5ggsDkyzZnlcdF/lqM1T+o/yWXXQWu1gKCnVq5WIlNFGnXWjGP3TF4WsLSgj+EgoZlXOilI4tujAbNH/HdSDQ0IE8alq4mRl9F7DBcWf5G1x6+eGLqfoNCrASeiLfTX2m20jy8AQNvzyB4+Ik3MT1OAqbHykjoZISNjJyTNoL+SwzEKDArXWk03CRgm5cegTeeQ28ynNmwsLB7Ol6co9BzSHK4HCc+9V5442eyKg29dM2WASLEBijw7B9V56EIEno+CTdfsUReGUn+tL+U3d5KdUuqM5DMIp5dt8d3ck01fcVK71dPMOAIbdLil2mUYvYlBpc7tVNEzf900CdupGCKLqVzmqkacY6nGZIGJoV/2cjXV3kIlh7uUstgOFnm0h8t482Mky90cYhS6g+T893DG+wIRomIwbeVxURGMozi86EMS2mzPwQ3GggulY7ZZg=" SubTotal="8892.04" Moneda="MXN" TipoCambio="1" Total="10314.78" TipoDeComprobante="I" MetodoPago="PPD" LugarExpedicion="54030">
+                <cfdi:Emisor Rfc="IUS890616RH6" Nombre="AT&amp;T COMERCIALIZACION MOVIL" RegimenFiscal="601"/>
+                <cfdi:Receptor Rfc="ESV910812H23" Nombre="EQUIPOS Y SERVICIOS VICA" UsoCFDI="G03" RegimenFiscalReceptor="601" DomicilioFiscalReceptor="03100"/>
+                <cfdi:Conceptos>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Ármalo Negocios $1299_Arr" ValorUnitario="783.88" Importe="783.88" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="783.88" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="125.42"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="2" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Ármalo Negocios $499_Arr" ValorUnitario="301.12" Importe="602.24" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="602.24" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="96.36"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Ármalo Negocios $1299_Arr" ValorUnitario="55.99" Importe="55.99" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="55.99" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="8.96"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="2" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Ármalo Negocios $499_Arr" ValorUnitario="21.51" Importe="43.02" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="43.02" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="6.88"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Ármalo Negocios $1299_Arr" ValorUnitario="279.96" Importe="279.96" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="279.96" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="44.79"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="2" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Ármalo Negocios $499_Arr" ValorUnitario="107.54" Importe="215.08" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="215.08" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="34.42"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="3" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 1299 Arrear" ValorUnitario="783.88" Importe="2351.64" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="2351.64" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="376.26"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="3" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 1299 Arrear" ValorUnitario="55.99" Importe="167.97" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="167.97" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="26.88"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="3" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 1299 Arrear" ValorUnitario="279.96" Importe="839.88" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="839.88" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="134.38"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 239 Arrear" ValorUnitario="144.22" Importe="144.22" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="144.22" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="23.08"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 239 Arrear" ValorUnitario="10.30" Importe="10.30" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="10.30" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1.65"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 239 Arrear" ValorUnitario="51.51" Importe="51.51" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="51.51" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="8.24"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 299 Arrear" ValorUnitario="180.43" Importe="180.43" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="180.43" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="28.87"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 299 Arrear" ValorUnitario="12.89" Importe="12.89" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="12.89" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="2.06"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 299 Arrear" ValorUnitario="64.44" Importe="64.44" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="64.44" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="10.31"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Con Todo Negocios 499 Arrear" ValorUnitario="343.97" Importe="343.97" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="343.97" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="55.04"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Con Todo Negocios 499 Arrear" ValorUnitario="8.62" Importe="8.62" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="8.62" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1.38"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Con Todo Negocios 499 Arrear" ValorUnitario="77.59" Importe="77.59" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="77.59" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="12.41"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 599 Arrear" ValorUnitario="361.47" Importe="361.47" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="361.47" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="57.84"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 599 Arrear" ValorUnitario="25.82" Importe="25.82" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="25.82" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="4.13"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 599 Arrear" ValorUnitario="129.09" Importe="129.09" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="129.09" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="20.65"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 799 Arrear" ValorUnitario="482.16" Importe="482.16" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="482.16" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="77.15"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 799 Arrear" ValorUnitario="34.43" Importe="34.43" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="34.43" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="5.51"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="83111603" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="AT&amp;T Con Todo Negocios 799 Arrear" ValorUnitario="172.20" Importe="172.20" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="172.20" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="27.55"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="81112100" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Ármalo Negocios $499_Arr" ValorUnitario="728.38" Importe="728.38" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="728.38" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="116.54"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="81112100" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="ATT Con Todo Negocios 499 Arrear" ValorUnitario="721.86" Importe="721.86" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="721.86" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="115.50"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                    <cfdi:Concepto ClaveProdServ="01010101" Cantidad="1" ClaveUnidad="E48" Unidad="Unidad de servicio" Descripcion="Marcaciones especiales" ValorUnitario="3.00" Importe="3.00" ObjetoImp="02">
+                        <cfdi:Impuestos>
+                            <cfdi:Traslados>
+<cfdi:Traslado Base="3.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.48"/>
+                            </cfdi:Traslados>
+                        </cfdi:Impuestos>
+                    </cfdi:Concepto>
+                </cfdi:Conceptos>
+                <cfdi:Impuestos TotalImpuestosTrasladados="1422.74">
+                    <cfdi:Traslados>
+                        <cfdi:Traslado Base="8892.04" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1422.74"/>
+                    </cfdi:Traslados>
+                </cfdi:Impuestos>
+                <cfdi:Complemento>
+                    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" Version="1.1" UUID="00496FD4-EB5A-4333-81EF-8C3F8F451C8E" FechaTimbrado="2026-07-05T12:42:09" RfcProvCertif="TLE011122SC2" SelloCFD="e0/qW2dIfTaoOS+mADc7HOcTWsdc1FDfDTJZD5VGfiRe11QDgFRahHnc7xKo7iYOcf4029KW4HNKQr6KloBgg5aptLz5QH2njJHl3SsFhPk/s6qcR3M6pehAe9+HbOl7Lq80ryyWsd95G/RbZAPrI1f7M108F79Jegw5TeGnm0R6TyQVATB6jMWyc/fo4+4UJhWeBoOqOJCkelXqFB0SEyn59NJjcSV0bHKUdJm+7QcauM+8lyxpo1WnyD+bezlKEZKLnsJPZrhxeJ8KIxG4jpaDvfC36QUJyd2rwez9SY4zWFIVoHYcHX7KfwqMR/3MLfIH9tpNLDQvd91/KPjALQ==" NoCertificadoSAT="00001000000704859748" SelloSAT="A7+K1U19RfMAWAq1KJTSKYXYeAs+lRpXj7QuklAunIxHWM0MiGd0FVmzHmS3+jC1aol2djPbtVFr3W5t48HfpX3hkU9O2xqnl/jGzLmAq2xfKZmNwUq7uFu6LtG6aFYxjJX8ZsjsQOHMZPdeO9/Y2DQfSLMbpPvXkE5ll/DMoo2Wh/LWpzDm7nAKSa+2CU99ba0t8Q3ur4BuxxdnOBPeXnu5s1GMXIF8pIyVAzJzhV4mkY6VUbjv3rZxmqxDrKs9G0qIpCICJ+905zmWKn6dTQT5uVjhlXmy/ihfLuEdGMrW34fJ0vrQMJXzydFwI534/dQWrv74sE+QAk22NH7ZFg==" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd"/>
+                </cfdi:Complemento>
+            </cfdi:Comprobante>

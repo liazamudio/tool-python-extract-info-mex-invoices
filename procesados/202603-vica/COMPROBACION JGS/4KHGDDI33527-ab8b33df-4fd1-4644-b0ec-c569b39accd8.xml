@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Version="4.0" Serie="4KHGDDI" Folio="33527" Fecha="2026-03-01T14:54:27" Exportacion="01" Sello="VBeEB/kj+LklTgXRK5azJWtV8yiq0zOFoyRrIK0wIwk9mYW1dZ2QHf7jzP/42Q6s4lUXn/2HGBpa+7cwn/MMt2bFIXB6rHVXyFR1r4nCqhCbsgIcfGkcDU2BX8S0bfCKXBXs7hU1+pdiymNRr9EkhXYrW5rQ25m/Enna77G1UT8p5FLvp2++qFaJLp6L/ChxZFfrW94gxx4rA5fUmGRB7JuKu270NiU6HSWE/PxJS+gTXOSKewPPLvnh+C5H54RsG1v7wvbhNS755tY2oowCkjEXfkE84URflWy2rZV/i5+h4pQTVR2WPo8ss030jM5UMYOMKAilPnfpN5HXUfSHFw==" FormaPago="04" NoCertificado="00001000000715333650" Certificado="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" CondicionesDePago="PAGADO" SubTotal="3388.52" Descuento="219.83" Moneda="MXN" TipoCambio="1" Total="3672.01" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="04920" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<cfdi:Emisor Nombre="HOME DEPOT MEXICO" Rfc="HDM001017AS1" RegimenFiscal="601"/>
+<cfdi:Receptor Rfc="ESV910812H23" Nombre="EQUIPOS Y SERVICIOS VICA" UsoCFDI="G03" DomicilioFiscalReceptor="03100" RegimenFiscalReceptor="601"/>
+<cfdi:Conceptos>
+<cfdi:Concepto ClaveProdServ="31211500" NoIdentificacion="109389" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="BERELEX GREEN BLANCO 4 L" ValorUnitario="814.66" Importe="814.66" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="814.66" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="130.35"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="11111501" NoIdentificacion="292959" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="TIERRA PREPARADA 5 KG VIGORO" ValorUnitario="64.66" Importe="64.66" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="64.66" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="10.35"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="39121009" NoIdentificacion="233237" Cantidad="2.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="PROTECTOR CONTRA SOBRECARGAS" ValorUnitario="256.04" Importe="512.07" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="512.07" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="81.93"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="10171500" NoIdentificacion="291864" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="FERTILIZANTE TRIPLE 17 1 KG VIGORO" ValorUnitario="85.34" Importe="85.34" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="85.34" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="13.65"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="39121400" NoIdentificacion="150887" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="APAG ESC C/ PILOTO TITANIO MATE ES" ValorUnitario="88.79" Importe="88.79" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="88.79" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="14.21"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="39121522" NoIdentificacion="150892" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="CONT 2P+T TITANIO MATE ES GAMM" ValorUnitario="61.21" Importe="61.21" Descuento="61.21" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="0.000001" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.00"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="39121522" NoIdentificacion="150892" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="CONT 2P+T TITANIO MATE ES GAMM" ValorUnitario="61.21" Importe="61.21" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="61.21" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="9.79"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="39121400" NoIdentificacion="150931" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="PLACA 3 VENT TITANIO MATE ES GAMM" ValorUnitario="70.69" Importe="70.69" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="70.69" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="11.31"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="12131700" NoIdentificacion="756230" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="ENCENDEDOR ANTORCHA LUJO DESECHABLE" ValorUnitario="37.93" Importe="37.93" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="37.93" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="6.07"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="39122200" NoIdentificacion="129903" Cantidad="4.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="APAG SENC METAL SATIN ES OME" ValorUnitario="79.31" Importe="317.24" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="317.24" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="50.76"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="31162701" NoIdentificacion="255806" Cantidad="2.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="RODAJA TWIN 2&quot; (50MM) C/ESPP/MAD" ValorUnitario="37.07" Importe="74.14" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="74.14" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="11.86"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="39122200" NoIdentificacion="129907" Cantidad="2.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="CONT 2P+T METAL SATIN ES OME" ValorUnitario="79.31" Importe="158.62" Descuento="158.62" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="0.000001" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="0.00"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="49241712" NoIdentificacion="252900" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="BAJA EL PH 5 KGS" ValorUnitario="383.62" Importe="383.62" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="383.62" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="61.38"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="49241712" NoIdentificacion="790595" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="CLARIFICADOR 1 LITRO" ValorUnitario="59.48" Importe="59.48" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="59.48" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="9.52"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="39121704" NoIdentificacion="129961" Cantidad="2.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="PLACA 3 VENT C/MARCO INTERNO SATIN" ValorUnitario="133.62" Importe="267.24" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="267.24" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="42.76"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="01010101" NoIdentificacion="239142" Cantidad="2.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="CONTACTO DUPLEX 2P+E 15A 250V CON P" ValorUnitario="154.31" Importe="308.62" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="308.62" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="49.38"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+<cfdi:Concepto ClaveProdServ="50202301" NoIdentificacion="101400" Cantidad="1.00" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="AGUA CIEL CRISTAL NANA 1.0LT PET" ValorUnitario="23.00" Importe="23" ObjetoImp="02">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="23.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.000000" Importe="0.00"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+</cfdi:Conceptos>
+<cfdi:Impuestos TotalImpuestosTrasladados="503.32">
+<cfdi:Traslados>
+<cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Base="3145.69" Importe="503.32"/>
+<cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.000000" Base="23.00" Importe="0.00"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+<cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="ab8b33df-4fd1-4644-b0ec-c569b39accd8" FechaTimbrado="2026-03-01T14:54:35" RfcProvCertif="AUR100128NN3" SelloSAT="f1gg+PVKNNDeHek0x0faUwFrIU50cS5OPzhUQyzaBeqnzrxvYhhOhA3EJA/Xn9ppvH7jRYqhRnfp0oQY3bPY98ALtJb6hvO6jwcs65lmTbTocK19cQZD1AmZyez8MXquPI0GK0GhBrRcH64AFv0jFZZLzIspL7drM2AxoU1POAl4g6ke+MujgfJZGdHe76zR5Yrdw/ZtUYJY6KRWDTNHRR5zkNPdkwLpyvS7PTlpmpSWZ4OmGH7S6TB5BddTxmDTzXT7L9bgmzPq4ERWIQURvsZ/3dhKDmmedS7TAQmPdWRDYMqzUQCEokxYnstzgU+KU5YYz/VAr8hyBvJUShCiyg==" SelloCFD="VBeEB/kj+LklTgXRK5azJWtV8yiq0zOFoyRrIK0wIwk9mYW1dZ2QHf7jzP/42Q6s4lUXn/2HGBpa+7cwn/MMt2bFIXB6rHVXyFR1r4nCqhCbsgIcfGkcDU2BX8S0bfCKXBXs7hU1+pdiymNRr9EkhXYrW5rQ25m/Enna77G1UT8p5FLvp2++qFaJLp6L/ChxZFfrW94gxx4rA5fUmGRB7JuKu270NiU6HSWE/PxJS+gTXOSKewPPLvnh+C5H54RsG1v7wvbhNS755tY2oowCkjEXfkE84URflWy2rZV/i5+h4pQTVR2WPo8ss030jM5UMYOMKAilPnfpN5HXUfSHFw==" NoCertificadoSAT="00001000000710611637" /></cfdi:Complemento></cfdi:Comprobante>

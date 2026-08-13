@@ -240,5 +240,5 @@ def process_folder(folder_path: str, output_dir: str = "./extraidos") -> pd.Data
 if __name__ == "__main__":
     # Ejemplo de uso:
     # carpeta_xml = r"./cfdis_xml"
-    carpeta_xml = r"./cfdis_xml/202601-pers"
+    carpeta_xml = r"./cfdis_xml/202607-vica"
     df_cfdis = process_folder(carpeta_xml)
