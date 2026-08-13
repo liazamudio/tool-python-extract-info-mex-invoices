@@ -1,219 +1,92 @@
-# Lector de XMLs CFDI
+# Lector de CFDIs XML
 
-Herramienta para extraer información de archivos XML de CFDI (Comprobante Fiscal Digital por Internet) mexicanos y exportarla a formato CSV usando pandas.
+Convierte lotes de CFDI (XML) del SAT en un CSV y un DataFrame de pandas listos para analizar, para quien concentra facturas fiscales mexicanas mes a mes y necesita un consolidado sin abrir archivo por archivo.
 
-## 📋 Descripción
+![demo](docs/demo.gif)
+<!-- COMPLETAR: no se encontró GIF ni captura en el repositorio. Agrega una imagen de la salida en consola (print_cfdi) o del CSV/DataFrame resultante en docs/demo.gif -->
 
-Este proyecto lee archivos XML de facturas electrónicas CFDI (versiones 3.3 y 4.0) desde una carpeta y sus subcarpetas, extrae la información relevante y genera un archivo CSV con todos los datos estructurados. Además, muestra un DataFrame con estadísticas y resúmenes de la información procesada.
+## Problema / Motivación
 
-## ✨ Características
+Revisar CFDI en XML uno por uno para sacar totales, IVA o emisores es lento y propenso a error cuando se acumulan varias facturas por periodo. Este script automatiza la extracción: recorre carpetas y subcarpetas de XMLs, homologa los datos (soporta CFDI 3.3 y 4.0, que usan namespaces distintos) y entrega un CSV consolidado más un resumen estadístico en consola.
 
-- ✅ Lectura recursiva de archivos XML en carpeta y subcarpetas
-- ✅ Soporte para CFDI versión 3.3 y 4.0
-- ✅ Extracción completa de datos:
-  - Información del comprobante (fecha, serie, folio, moneda, etc.)
-  - Datos del emisor (RFC, nombre, régimen fiscal)
-  - Datos del receptor (RFC, nombre, régimen fiscal, CP, uso CFDI)
-  - Conceptos detallados
-  - Impuestos (IVA y otros)
-  - UUID del Timbre Fiscal Digital
-  - Campos personalizados adicionales
-- ✅ Exportación a CSV con nomenclatura con timestamp
-- ✅ Visualización de DataFrame con estadísticas
-- ✅ Manejo de múltiples subcarpetas
+<!-- COMPLETAR: motivación personal/de negocio detrás del proyecto — para qué caso de uso específico lo usas (declaración de impuestos, control de gastos personal, contabilidad de un negocio, etc.) y qué lo disparó -->
 
-## 📁 Estructura del Proyecto
+## Demo
 
-```
-project/
-├── extract-info-of-xmls.py    # Script principal
-├── cfdis_xml/                 # Carpeta con archivos XML (entrada)
-│   ├── 04-01 HAOYUAN HUANG Comida china/
-│   ├── 07-01 Flecha Roja/
-│   ├── 07-01 Sumesa/
-│   └── ...
-├── extraidos/                 # Carpeta con CSVs generados (salida)
-│   └── YYYYMMDD_HHMMSS_info_cfdis.csv
-├── requirements.txt           # Dependencias del proyecto
-└── README.md                  # Este archivo
-```
+<!-- COMPLETAR: no hay demo pública (herramienta de uso local vía CLI/notebook, sin despliegue). Si quieres, agrega aquí un GIF de la ejecución o un link a un notebook de ejemplo (Colab, nbviewer, etc.) -->
 
-## 🚀 Instalación
+## Stack técnico
 
-### 1. Clonar o descargar el proyecto
+- **Frontend:** N/A — herramienta de línea de comandos, sin interfaz web
+- **Backend:** Python 3.13, `xml.etree.ElementTree` (parsing XML de la librería estándar) + `pandas` 2.3 para transformación y exportación
+- **Base de datos:** N/A — no usa base de datos; persiste resultados como CSV en `extraidos/`
+- **Infraestructura/Deploy:** N/A — ejecución local. No se detectó Dockerfile, workflow de CI/CD ni configuración de despliegue en el repositorio
+
+## Características principales
+
+- Lectura recursiva de archivos `.xml` en una carpeta y todas sus subcarpetas
+- Compatible con CFDI 3.3 y 4.0 (detección automática de namespace vía wildcard `{*}`)
+- Extrae comprobante, emisor, receptor, conceptos, impuestos (IVA vs. otros impuestos) y UUID del Timbre Fiscal Digital
+- Captura además cualquier atributo no estándar del nodo `Comprobante` como columna dinámica en el CSV
+- Exporta a CSV con nombre por timestamp (`extraidos/YYYYMMDD_HHMMSS_info_cfdis.csv`)
+- Imprime resumen estadístico en consola: total facturado, IVA, promedio por factura, emisores y subcarpetas únicos
+- Notebook equivalente ([extract-info-of-xmls.ipynb](extract-info-of-xmls.ipynb)) para correr el mismo pipeline de forma interactiva
+
+## Cómo correrlo localmente
+
+Requiere Python 3.13+.
 
 ```bash
-git clone <url-del-repositorio>
+# 1. Clonar el repositorio
+git clone <URL_DEL_REPOSITORIO>
 cd project
-```
 
-### 2. Crear entorno virtual (recomendado)
-
-```bash
-# Windows
+# 2. Crear y activar entorno virtual
 python -m venv .venv
+
+# Windows
 .venv\Scripts\activate
-
-venv\Scripts\activate   # Forma comun de activar el entorno.
-deactivate              # Forma común de desactivar el entorno.
-
 # Linux/Mac
-python3 -m venv .venv
 source .venv/bin/activate
-```
 
-### 3. Instalar dependencias
-
-```bash
+# 3. Instalar dependencias
 pip install -r requirements.txt
-```
 
-## 💻 Uso
-
-### Ejecución básica
-
-```bash
+# 4. Ejecutar
 python extract-info-of-xmls.py
 ```
 
-### Parámetros configurables en el código
+<!-- COMPLETAR: este checkout local no tiene remote configurado (`git remote -v` vacío). Reemplaza <URL_DEL_REPOSITORIO> por la URL real una vez que publiques el repositorio -->
 
-Puedes modificar las siguientes variables en el script:
+No requiere variables de entorno: no hay `.env`/`.env.example` en el repositorio ni lectura de `os.environ` en el código.
 
-```python
-# Carpeta de entrada (por defecto: "./cfdis_xml")
-folder_path = "./cfdis_xml"
-
-# Carpeta de salida (por defecto: "./extraidos")
-output_dir = "./extraidos"
-```
-
-### Ejemplo de ejecución
-
-```bash
-# Con el entorno virtual activado
-(.venv) PS D:\devs\utilities\lector-xml\project> python extract-info-of-xmls.py
-
-Archivo: HUHA770101CP3FF7332.xml
-CFDI 4.0 | Serie-Folio: None-7332 | Fecha: 2025-12-04T16:29:10
-Emisor: HAOYUAN HUANG (HUHA770101CP3) Regimen: 612
-Receptor: ALEXANDRO IVAN ZAMUDIO ROMERO (ZARA781005JK7) UsoCFDI: G03
-Subtotal: 142.24  Descuento: 0.00
-IVA: 22.76  Otros impuestos: 0.00
-Total: 165.00
-Conceptos:
-  - CONSUMO DE ALIMENTOS | Cant: 1.0 | VU: 142.241379 | Importe: 142.241379
---------------------------------------------------------------------------------
-...
-
-Total de CFDIs procesados: 31
-CSV generado: ./extraidos\20260119_172905_info_cfdis.csv
-
-====================================================================================================
-DATAFRAME CON INFORMACION DE LOS CFDIs:
-====================================================================================================
-...
-```
-
-## 📊 Salida
-
-### CSV Generado
-
-El archivo CSV contiene las siguientes columnas:
-
-**Columnas estándar (23):**
-- file, subcarpeta, uuid, version, fecha, serie, folio
-- emisor_rfc, emisor_nombre, emisor_regimen
-- receptor_rfc, receptor_nombre, receptor_regimen, receptor_cp, uso_cfdi
-- moneda, tipo_comprobante, lugar_expedicion
-- subtotal, descuento, iva, otros_impuestos, total
-
-**Columnas dinámicas:**
-- Campos personalizados adicionales del comprobante (Certificado, CondicionesDePago, Exportacion, FormaPago, MetodoPago, etc.)
-
-### Estadísticas mostradas
-
-- Total de registros procesados
-- Total de columnas
-- Lista de todas las columnas
-- Primeros 10 registros
-- Totales: subtotal, IVA, total general
-- Promedio por factura
-- Número de emisores únicos
-- Número de subcarpetas procesadas
-
-## 🛠️ Requisitos
-
-- Python 3.13+
-- pandas 2.3.3+
-- numpy 2.4.1+
-
-Ver archivo `requirements.txt` para la lista completa de dependencias.
-
-## 📝 Notas Técnicas
-
-### Compatibilidad CFDI
-
-El script es compatible con:
-- CFDI versión 3.3
-- CFDI versión 4.0
-
-Utiliza búsqueda con wildcard `{*}` para detectar automáticamente la versión del XML.
-
-### Namespace utilizado
+Antes de ejecutar, ajusta la carpeta de entrada al final de [extract-info-of-xmls.py](extract-info-of-xmls.py#L243) (por defecto apunta a `./cfdis_xml/202607-vica`, que no existe en este checkout):
 
 ```python
-NS = {
-    "cfdi": "http://www.sat.gob.mx/cfd/4",
-    "tfd": "http://www.sat.gob.mx/TimbreFiscalDigital"
-}
+carpeta_xml = r"./cfdis_xml"   # o la subcarpeta del periodo que quieras procesar
+df_cfdis = process_folder(carpeta_xml)
 ```
 
-### Optimizaciones
+El CSV resultante se guarda en `extraidos/`, carpeta que el script crea automáticamente si no existe.
 
-El código incluye varias optimizaciones:
-- Función `_get_float()` para conversiones numéricas eficientes
-- List comprehension para extracción de conceptos
-- Dict comprehension para construcción del DataFrame
-- Cálculo único de subcarpeta por directorio
+## Decisiones técnicas relevantes
 
-## 🔧 Solución de Problemas
+- **`xml.etree.ElementTree` de la librería estándar en lugar de `lxml`**: evita una dependencia binaria externa; suficiente para el volumen de XMLs que procesa el script.
+- **Namespace resuelto con wildcard `{*}`** en vez de mapear namespaces fijos por versión: permite parsear CFDI 3.3 y 4.0 (namespaces distintos entre sí) sin bifurcar el código en dos parsers.
+- **Salida a CSV plano, una fila por comprobante,** en lugar de una base de datos: prioriza portabilidad e importación directa a Excel/Sheets sobre consultabilidad.
 
-### Error: "No such file or directory"
+<!-- COMPLETAR: trade-offs adicionales que hayas evaluado (por ejemplo, por qué no se valida el CFDI contra el XSD del SAT, o por qué los conceptos no se exportan en filas separadas) -->
 
-Verifica que:
-- La carpeta `cfdis_xml/` existe
-- Hay archivos `.xml` en la carpeta o subcarpetas
-- El path está correctamente especificado
+## Estado del proyecto
 
-### Error de encoding
+**Activo.** Último commit: 13 de agosto de 2026 (`Se agregó .gitignore y LICENSE`). El historial muestra desarrollo incremental continuo desde el commit inicial.
 
-Los archivos se procesan con encoding UTF-8. Si tienes problemas, verifica que tus XMLs estén en UTF-8.
+## Autor / Rol
 
-### DataFrame truncado
+**Alexandro Ivan Zamudio Romero** — autor y único mantenedor (todos los commits del repositorio corresponden a este autor).
 
-El script configura pandas para mostrar todas las columnas. Si necesitas más filas:
+<!-- COMPLETAR: si quieres, agrega tu rol profesional, LinkedIn/portafolio o el contexto en el que usas esta herramienta (freelance, negocio propio, etc.) -->
 
-```python
-pd.set_option('display.max_rows', 100)  # Aumentar número de filas
-```
+## Licencia
 
-## 📄 Licencia
-
-Este proyecto está bajo la licencia que determines.
-
-## 👤 Autor
-
-Alexandro Ivan Zamudio Romero
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, abre un issue o pull request.
-
-## 📞 Contacto
-
-Para preguntas o sugerencias, por favor abre un issue en el repositorio.
-
----
-
-**Última actualización:** Enero 2026
+MIT — ver [LICENSE](LICENSE).
