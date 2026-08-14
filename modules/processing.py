@@ -203,7 +203,7 @@ def parse_cfdi(xml_path: str) -> Dict[str, Any]:
     return data
 
 
-def process_folder(folder_path: str, output_dir: str = "./extraidos") -> pd.DataFrame:
+def process_folder(folder_path: str, output_dir: str = "./procesados/output") -> pd.DataFrame:
     """
     Procesa todos los archivos XML en la carpeta y subcarpetas.
 
@@ -243,7 +243,7 @@ def process_folder(folder_path: str, output_dir: str = "./extraidos") -> pd.Data
 
     print(f"\nTotal de CFDIs procesados: {len(cfdis)}")
 
-    # Crear carpeta extraidos si no existe
+    # Crear carpeta de salida si no existe
     os.makedirs(output_dir, exist_ok=True)
 
     # Generar nombre del archivo con fecha y hora
