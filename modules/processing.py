@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional
 
 import pandas as pd
 
-from export import export_cfdi_to_csv, print_cfdi
+from .export import export_cfdi_to_csv, print_cfdi
 
 # Namespaces típicos CFDI 3.3 / 4.0
 NS = {
