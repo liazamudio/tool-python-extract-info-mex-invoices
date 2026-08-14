@@ -203,7 +203,7 @@ def parse_cfdi(xml_path: str) -> Dict[str, Any]:
     return data
 
 
-def process_folder(folder_path: str, output_dir: str = "./procesados/output") -> pd.DataFrame:
+def process_folder(folder_path: str, output_dir: str = "./procesados/processed-data") -> pd.DataFrame:
     """
     Procesa todos los archivos XML en la carpeta y subcarpetas.
 
