@@ -1,5 +1,6 @@
 # Carpetas de datos procesados
 procesados/
+extraidos/
 
 # Entornos virtuales
 venv/
