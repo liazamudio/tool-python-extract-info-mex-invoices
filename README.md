@@ -19,7 +19,7 @@ Revisar CFDI en XML uno por uno para sacar totales, IVA o emisores es lento y pr
 
 - **Frontend:** N/A — herramienta de línea de comandos, sin interfaz web
 - **Backend:** Python 3.13, `xml.etree.ElementTree` (parsing XML de la librería estándar) + `pandas` 2.3 para transformación y exportación
-- **Base de datos:** N/A — no usa base de datos; persiste resultados como CSV en `extraidos/`
+- **Base de datos:** N/A — no usa base de datos; persiste resultados como CSV en `procesados/processed-data/`
 - **Infraestructura/Deploy:** N/A — ejecución local. No se detectó Dockerfile, workflow de CI/CD ni configuración de despliegue en el repositorio
 
 ## Características principales
@@ -28,8 +28,9 @@ Revisar CFDI en XML uno por uno para sacar totales, IVA o emisores es lento y pr
 - Compatible con CFDI 3.3 y 4.0 (detección automática de namespace vía wildcard `{*}`)
 - Extrae comprobante, emisor, receptor, conceptos, impuestos (IVA vs. otros impuestos) y UUID del Timbre Fiscal Digital
 - Captura además cualquier atributo no estándar del nodo `Comprobante` como columna dinámica en el CSV
-- Exporta a CSV con nombre por timestamp (`extraidos/YYYYMMDD_HHMMSS_info_cfdis.csv`)
+- Exporta a CSV con nombre por timestamp (`procesados/processed-data/YYYYMMDD_HHMMSS_info_cfdis.csv`)
 - Imprime resumen estadístico en consola: total facturado, IVA, promedio por factura, emisores y subcarpetas únicos
+- Lógica de extracción centralizada en el paquete [modules/](modules/) (`processing.py`, `export.py`), reutilizada tanto por el script como por el notebook
 - Notebook equivalente ([extract-info-of-xmls.ipynb](extract-info-of-xmls.ipynb)) para correr el mismo pipeline de forma interactiva
 
 ## Cómo correrlo localmente
@@ -60,14 +61,13 @@ python extract-info-of-xmls.py
 
 No requiere variables de entorno: no hay `.env`/`.env.example` en el repositorio ni lectura de `os.environ` en el código.
 
-Antes de ejecutar, ajusta la carpeta de entrada al final de [extract-info-of-xmls.py](extract-info-of-xmls.py#L243) (por defecto apunta a `./cfdis_xml/202607-vica`, que no existe en este checkout):
+Al ejecutarlo, el script pide por consola la ruta de la carpeta con los XML a procesar, por ejemplo:
 
-```python
-carpeta_xml = r"./cfdis_xml"   # o la subcarpeta del periodo que quieras procesar
-df_cfdis = process_folder(carpeta_xml)
+```text
+Ruta de la carpeta: (por ejemplo: ./procesados/data-to-process/202601-pers)
 ```
 
-El CSV resultante se guarda en `extraidos/`, carpeta que el script crea automáticamente si no existe.
+Coloca los XML a procesar dentro de `procesados/data-to-process/` (una subcarpeta por periodo). El CSV resultante se guarda con nombre por timestamp en `procesados/processed-data/`, carpeta que el script crea automáticamente si no existe.
 
 ## Decisiones técnicas relevantes
 
